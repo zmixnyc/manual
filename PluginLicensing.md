@@ -25,7 +25,7 @@ VCV offers commercial royalty licensing for Rack plugins by emailing [contact@vc
 This license also includes permission to use the [Component Library](https://github.com/VCVRack/Rack/blob/v1/include/componentlibrary.hpp) graphics by [Grayscale](https://grayscale.info/), which are normally licensed for non-commercial use only.
 
 It is recommended to contact VCV as early as possible in your development process to make sure the license agreement is ready well before you release your plugin.
-You can expedite the licensing processing by sending concepts and design mockups along with your license request.
+You can expedite the licensing processing by sending concepts or design mockups along with your license request.
 
 You may also wish to sell your plugin on the [VCV Library](https://vcvrack.com/plugins.html).
 Some benefits of distributing your plugin on the VCV Library:

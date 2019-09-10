@@ -24,7 +24,7 @@ Rack
 
    PluginDevelopmentTutorial.md
    Panel.md
-   Metadata.md
+   Manifest.md
    VoltageStandards.md
    DSP.md
    Migrate1.md

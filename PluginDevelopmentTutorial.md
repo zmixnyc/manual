@@ -6,10 +6,10 @@
 - Familiarity with navigating the command line (`cd`, `ls`, etc).
 - Familiarity with modular synthesizers. [Digital signal processing (DSP)](DSP.html) knowledge is only required if creating sound generators and processors.
 - Download and install [VCV Rack](https://vcvrack.com/Rack.html).
-- Download and extract [Rack-SDK-1.1.1.zip](https://vcvrack.com/downloads/Rack-SDK-1.1.1.zip).
-This contains the Rack API headers and build system for compiling your plugin.
 - Follow the steps to [set up your build environment](Building.html#setting-up-your-development-environment) for your operating system.
 You do not need to build Rack from source if using the Rack SDK.
+- Download and extract [Rack-SDK-1.1.4.zip](https://vcvrack.com/downloads/Rack-SDK-1.1.4.zip).
+This contains the Rack API headers and build system for compiling your plugin.
 
 ## Creating the template plugin
 
@@ -60,7 +60,7 @@ Example session:
 ```text
 Module name [MyModule]: My Module
 One-line description (optional) []: Simple sine oscillator
-Tags (comma-separated, case-insensitive, see https://github.com/VCVRack/Rack/blob/v1/src/plugin.cpp#L511-L571 for list) []: VCO
+Tags (comma-separated, case-insensitive, see https://github.com/VCVRack/Rack/blob/v1/src/tag.cpp for list) []: VCO
 Added MyModule to plugin.json
 Panel found at res/MyModule.svg. Generating source file.
 Found 1 params, 1 inputs, 1 outputs, 0 lights, and 0 custom widgets.

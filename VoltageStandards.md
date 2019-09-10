@@ -43,7 +43,7 @@ Gates should produce **10V** when active.
 Each cable in Rack induces a 1-sample delay of its carried signal from the output port to the input port.
 This means that it is not guaranteed that two signals generated simultaneously will arrive at their destinations at the same time if the number of cables in each signal's chain is different.
 For example, a pulse sent through a utility module and then to a sequencer's CLOCK input will arrive one sample later than the same pulse sent directly to the sequencer's RESET input.
-This will cause the sequencer to reset to step 1, and one sample later, advance to step 2, which is undesirable behavior.
+This will cause the sequencer to reset to step 1, and one sample later, advance to step 2, which is undesired behavior.
 
 Therefore, modules with a CLOCK and RESET input, or similar variants, should ignore CLOCK triggers up to **1ms** after receiving a RESET trigger.
 You can use `dsp::Timer` for keeping track of time.

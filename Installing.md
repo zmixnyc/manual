@@ -41,9 +41,11 @@ Downloading plugins directly from the Plugin Manager website is not supported at
 
 *Install third-party plugins at your own risk. Like VST plugins, installing plugins from unknown sources may compromise your computer and personal information.*
 
-Download the plugin ZIP package from the vendor's website to `<Rack user folder>/plugins` (See [Where is the "Rack user folder"?](FAQ.html#where-is-the-rack-user-folder)). Rack will extract and load the plugin upon launch.
+Download the plugin ZIP package from the vendor's website to `<Rack user folder>/plugins-v1` (See [Where is the "Rack user folder"?](FAQ.html#where-is-the-rack-user-folder)). Rack will extract and load the plugin upon launch.
 
 Note: Do not download the plugin via GitHub's green "Clone or download" button. These are source code ZIP packages and do not contain the compiled plugin binary. If the vendor distributes their plugin with GitHub, look in the "Releases" section for the compiled ZIP packages.
+
+Note: The "major" version number (e.g the `1` in `v1.2.3`) must match the major version number of Rack. See [ABI/API Version](Version.html).
 
 
 ## Running Rack

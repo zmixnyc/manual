@@ -47,14 +47,11 @@ Expands Rack to fill the screen with no window borders.
 
 
 ## Engine
-### CPU timer
+### CPU meter
 Enables/disables the measurement of time for each module to generate each sample (see [Sample rate](#sample-rate)).
 This displays a meter on each module with the number of microseconds (μs) and the percentage of time spent in the module's assigned thread (see [Threads](#threads)).
 
-If running in single-threaded mode, the total percentage must equal 100%, with "blocking" modules like [VCV Audio](Core.html#audio) consuming the remaining time by "sleeping" until the audio device is ready for more audio.
-If multi-threading is enabled, the total percentage may equal up to \\(N \times 100\\%\\), although this number is a bit less in reality due to [multi-threading overhead](https://en.wikipedia.org/wiki/Amdahl%27s_law).
-
-Timing takes CPU power itself, so it is recommended to disable the CPU timer when it is not needed for best performance.
+The CPU meter consumes engine time itself, so it is recommended to disable it when it is not needed for best performance.
 
 ### Sample rate
 Sets Rack's engine sample rate.

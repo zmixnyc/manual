@@ -1,4 +1,4 @@
-# Plugin Metadata
+# Plugin Manifest
 
 This document defines the `plugin.json` file found at the root of your plugin folder.
 For example, see Fundamental's [plugin.json](https://github.com/VCVRack/Fundamental/blob/v1/plugin.json) file.
@@ -120,7 +120,7 @@ The human-readable name for the module.
 *Array of strings. Optional.*
 
 List of tags representing the functions and/or properties of the module.
-All tags must match the [list of allowed tags](https://github.com/VCVRack/Rack/blob/v1/src/plugin.cpp#L540) in Rack, case-insensitive.
+All tags must match the [list of allowed tags](https://github.com/VCVRack/Rack/blob/v1/src/tag.cpp) in Rack, case-insensitive.
 
 ## `.modules[].description`
 

@@ -2,6 +2,8 @@
 
 ## I found a bug.
 
+All bug reports must be reproducible, otherwise they cannot be tested and fixed in a future release of Rack.
+
 Search [Rack's issue tracker](https://github.com/VCVRack/Rack/issues?q=is%3Aissue) to check if someone else has posted a similar bug report.
 If you believe the problem has never been reported before, [create a GitHub account](https://github.com/) (it's free) and [open a bug report issue](https://github.com/VCVRack/Rack/issues/new?template=bug_report.md).
 You must fill out the issue template, or it will be closed.
@@ -15,13 +17,10 @@ Search [Rack's issue tracker](https://github.com/VCVRack/Rack/issues?q=is%3Aissu
 If you believe the feature has never been requested before, [create a GitHub account](https://github.com/) (it's free) and [open an feature request issue](https://github.com/VCVRack/Rack/issues/new?template=feature_request.md).
 You must fill out the issue template, or it will be closed.
 
-## The graphics are rendered incorrectly, not at all, or Rack doesn't launch because of an "OpenGL error".
-
-Rack requires at least OpenGL 2.0 with the `GL_EXT_framebuffer_object` extension.
-If your graphics card supports this, make sure you've installed the latest graphics drivers, and restart Rack.
-If this does not fix it, see below for instructions on submitting a bug to Rack's issue tracker.
-
 ## Where is the "Rack user folder"?
+
+The Rack user folder stores data readable/writable by Rack.
+You can open it by choosing `Help > Open user folder` in the Rack [menu bar](MenuBar.html), or by navigating to
 
 - MacOS: `Documents/Rack/`
 - Windows: `My Documents/Rack/`
@@ -42,7 +41,7 @@ It is not planned. There are many issues with such a project.
 - Business:
 	- Such a port would be expensive to develop, so it would need to be sold commercially. Some plugins (proprietary, GPL, etc) would need special licensing agreements in order to be included in the package. Some plugins would increase the cost of the product if included in the package. Others would simply be omitted from the third-party plugin collection.
 	- The friction for a developer to build and test their plugins on iOS/Android is significantly higher than the three desktop OS's, which may decrease their willingness to develop Rack plugins.
-	- When serving an app on the App Store or Google Play, Apple and Google are not obligated to continue serving an app and may remove it at will or change policies on a whim that can disrupt VCV's business model. This would place VCV's risk in a small number of baskets.
+	- When serving an app on the App Store or Google Play, Apple and Google are not obligated to continue serving an app and may remove it at will or change policies on a whim that can disrupt VCV's business model. This would place a large risk upon VCV.
 
 ## Why does VCV Audio consume so much CPU?
 
@@ -60,7 +59,7 @@ All Rack v2 plugins will be compatible with the plugin version of Rack.
 The standalone version of Rack v2 will continue to be free/open-source.
 
 *VCV Bridge* was a VST2/AU plugin for bridging the standalone version of Rack with a DAW.
-However, users found it to be unreliable, so it is no longer distributed as of Rack v1.
+However, inter-process communication of audio buffers does not meet the reliability requirements of VCV and its users, so it is no longer distributed as of Rack v1.
 The audio/MIDI Bridge drivers will be removed in Rack v2.
 
 ## Does VCV Rack work with touch screens?
