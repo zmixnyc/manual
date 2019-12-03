@@ -73,7 +73,7 @@ Complete the [Setting up your development environment](#setting-up-your-developm
 
 Plugins can be built in two ways:
 - [Build Rack from source](#building-rack) and build plugins in the `plugins/` folder. (Recommended for advanced developers.)
-- Download an [official Rack build](https://vcvrack.com/Rack.html) and [Rack-SDK-1.1.4.zip](https://vcvrack.com/downloads/Rack-SDK-1.1.4.zip), and build plugins anywhere you like. (Easiest/fastest.)
+- Download an [official Rack build](https://vcvrack.com/Rack.html) and [the latest Rack SDK](https://vcvrack.com/downloads/), and build plugins anywhere you like. (Easiest/fastest.)
 
 Download or clone the plugin source code, e.g.
 

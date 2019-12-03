@@ -2,15 +2,13 @@
 VCV Rack Manual
 ===========================================
 
-VCV Rack is an open-source virtual modular synthesizer.
+`VCV Rack <https://vcvrack.com/>`_ is an open-source virtual modular synthesizer.
 
 Edit this manual at https://github.com/VCVRack/manual.
 
-Rack
-----
-
 .. toctree::
    :maxdepth: 1
+   :caption: Rack
 
    QuickStart.md
    Installing.md
@@ -41,5 +39,6 @@ Rack
    :maxdepth: 1
    :caption: Appendix
 
+   Issues.md
    Communities.md
    About.md

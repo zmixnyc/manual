@@ -153,8 +153,8 @@ Once your plugin can be compiled, change `#include <rack0.hpp>` back to `#includ
 
 Add new arguments to the `Module::step()` (now called `process()`) and `Widget::draw()` methods.
 ```bash
-perl -i -pe 's/void (\w+::)?step\(\)/void $1process(const ProcessArgs &args)/g' src/*
-perl -i -pe 's/void draw\(NVGcontext \*vg\)/void draw(const DrawArgs &args)/g' src/*
+perl -i -pe 's/void (\w+::)?step\(\)/void $1process(const ProcessArgs& args)/g' src/*
+perl -i -pe 's/void draw\(NVGcontext \*vg\)/void draw(const DrawArgs& args)/g' src/*
 perl -i -pe 's/\bvg\b/args.vg/g' src/*
 ```
 Note: `Widget::step()` has not been renamed, but this replacement will incorrectly rename it.

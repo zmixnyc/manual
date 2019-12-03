@@ -8,7 +8,7 @@
 - Download and install [VCV Rack](https://vcvrack.com/Rack.html).
 - Follow the steps to [set up your build environment](Building.html#setting-up-your-development-environment) for your operating system.
 You do not need to build Rack from source if using the Rack SDK.
-- Download and extract [Rack-SDK-1.1.4.zip](https://vcvrack.com/downloads/Rack-SDK-1.1.4.zip).
+- [Download the latest Rack SDK](https://vcvrack.com/downloads/) and extract.
 This contains the Rack API headers and build system for compiling your plugin.
 
 ## Creating the template plugin

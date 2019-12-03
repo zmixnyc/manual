@@ -10,6 +10,7 @@ extensions = [
 ]
 
 from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
 
 source_parsers = {
     '.md': CommonMarkParser,
@@ -95,6 +96,9 @@ epub_exclude_files = ['search.html']
 def setup(app):
     app.add_stylesheet("overrides.css")
     app.add_config_value('recommonmark_config', {
+        'enable_auto_toc_tree': True,
+        'auto_toc_tree_section': "Table of Contents",
         'enable_math': True,
         'enable_inline_math': True,
     }, True)
+    app.add_transform(AutoStructify)

@@ -47,7 +47,7 @@ If you publish the source code in a git repository, it is recommended to add a g
 The license of your plugin.
 Use `"proprietary"` for commercial and freeware plugins.
 
-If your plugin uses a common open-source license, the identifier from the [SPDX License List](https://spdx.org/licenses/) should be used.
+If your plugin uses a common open-source license, use the identifier string from the [SPDX License List](https://spdx.org/licenses/), such as `GPL-3.0-only`, `GPL-3.0-or-later`, `MIT`, `BSD-3-Clause`, `CC0-1.0`, etc.
 
 ## `.brand`
 
@@ -85,7 +85,7 @@ Homepage for the plugin itself.
 
 *String. Optional.*
 
-The manual of your plugin.
+The manual website of your plugin.
 E.g. HTML, PDF, GitHub readme, GitHub wiki.
 
 ## `.sourceUrl`
@@ -128,3 +128,10 @@ All tags must match the [list of allowed tags](https://github.com/VCVRack/Rack/b
 
 A one-line summary of the module's purpose.
 Displayed in the Module Browser tooltip.
+
+## `modules[].manualUrl`
+
+*String. Optional.*
+
+The manual website of the module.
+If omitted, the plugin's manual is used.

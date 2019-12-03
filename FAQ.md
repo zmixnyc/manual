@@ -1,22 +1,5 @@
 # FAQ
 
-## I found a bug.
-
-All bug reports must be reproducible, otherwise they cannot be tested and fixed in a future release of Rack.
-
-Search [Rack's issue tracker](https://github.com/VCVRack/Rack/issues?q=is%3Aissue) to check if someone else has posted a similar bug report.
-If you believe the problem has never been reported before, [create a GitHub account](https://github.com/) (it's free) and [open a bug report issue](https://github.com/VCVRack/Rack/issues/new?template=bug_report.md).
-You must fill out the issue template, or it will be closed.
-
-## I have a feature request.
-
-All features added to Rack must begin with a well-written proposal.
-If approved, it is implemented, publicly tested with development builds, and released in a future Rack version.
-
-Search [Rack's issue tracker](https://github.com/VCVRack/Rack/issues?q=is%3Aissue) to check if someone else has posted a similar feature request.
-If you believe the feature has never been requested before, [create a GitHub account](https://github.com/) (it's free) and [open an feature request issue](https://github.com/VCVRack/Rack/issues/new?template=feature_request.md).
-You must fill out the issue template, or it will be closed.
-
 ## Where is the "Rack user folder"?
 
 The Rack user folder stores data readable/writable by Rack.
@@ -43,27 +26,25 @@ It is not planned. There are many issues with such a project.
 	- The friction for a developer to build and test their plugins on iOS/Android is significantly higher than the three desktop OS's, which may decrease their willingness to develop Rack plugins.
 	- When serving an app on the App Store or Google Play, Apple and Google are not obligated to continue serving an app and may remove it at will or change policies on a whim that can disrupt VCV's business model. This would place a large risk upon VCV.
 
-## Why does VCV Audio consume so much CPU?
-
-The CPU timer measures the average *time* spent processing each sample, not the CPU *energy consumption* of modules.
-Since audio devices need to play audio at real-time (rather than as fast as the Rack engine can run), the VCV Audio modules need to wait for the last audio buffer to finish playing before sending a new audio buffer.
-While waiting, the engine thread is put to sleep, so no energy is consumed by the thread.
-See [CPU timer](MenuBar.html#cpu-timer) for more info.
-
 ## Is VCV Rack available as a VST/AU/AAX plugin for DAWs?
 
-VCV Rack is a standalone application, not a DAW plugin, since Rack can be fully considered a DAW itself.
-However, due to user demand, Rack will be available as a 64-bit VST2 plugin for around $99 shortly after Rack v2 is released around Dec 2019.
+VCV Rack can be fully considered a DAW itself rather than a "synthesizer plugin", so Rack is a standalone application.
+However, due to overwhelming user demand, a new product called *VCV Rack for DAWs* will be available as a 64-bit VST2 plugin for around $99 shortly after Rack v2 is released around Jan-Feb 2020.
 VST3/AU/AAX/LV2 versions might be released afterwards, but this is not yet confirmed.
 All Rack v2 plugins will be compatible with the plugin version of Rack.
 The standalone version of Rack v2 will continue to be free/open-source.
 
-*VCV Bridge* was a VST2/AU plugin for bridging the standalone version of Rack with a DAW.
-However, inter-process communication of audio buffers does not meet the reliability requirements of VCV and its users, so it is no longer distributed as of Rack v1.
-The audio/MIDI Bridge drivers will be removed in Rack v2.
+## What was VCV Bridge?
+
+[VCV Bridge](https://github.com/VCVRack/Bridge) was an experimental project for transferring audio/MIDI between VCV Rack and another DAW via a VST2/AU plugin.
+It relied on [inter-process communication (IPC)](https://en.wikipedia.org/wiki/Inter-process_communication) between Rack (server) and the DAW plugin (client), similar to [ReWire](https://en.wikipedia.org/wiki/ReWire_(software_protocol)).
+Because real-time IPC of audio cannot be achieved on non-[real-time operating systems](https://en.wikipedia.org/wiki/Real-time_operating_system), it was never intended as more than a fun experiment, and the project was concluded a month after development started.
+One could say the experiment "failed", but its purpose was primarily to see how much it would fail.
+VCV Bridge was deprecated in July 2018 and is now unsupported.
+The Bridge VST2/AU plugin was removed in Rack 1.0 (although it can be found in [earlier Rack packages](https://vcvrack.com/downloads/)), and the Bridge audio/MIDI driver will be removed in Rack 2.0.
 
 ## Does VCV Rack work with touch screens?
 
-Rack's window library GLFW does not support [touch input](https://github.com/glfw/glfw/issues/42), so Rack relies on the operating system to control the mouse cursor using the touch screen.
+Rack's window library GLFW does not support [touch input](https://github.com/glfw/glfw/issues/42) yet, so Rack relies on the operating system to control the mouse cursor using the touch screen.
 This means that multi-touch gestures do not work.
-However, you can set `"allowCursorLock"` to `false` in `<Rack user dir>/settings.json` to improve touch cursor handling for knobs.
+However, you can disable "View > Lock cursor while dragging" in the menu bar to prevent Rack from grabbing the mouse cursor when interacting with knobs.
