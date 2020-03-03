@@ -1,6 +1,6 @@
 
 project = 'VCV Rack'
-copyright = '2019, VCV'
+copyright = '2020, VCV'
 author = 'VCV'
 
 source_encoding = 'utf-8'
