@@ -7,9 +7,10 @@ If you encounter a bug in Rack itself (not a plugin), such as a UI issue, broken
 - Log in or register for a free [GitHub account](https://github.com/).
 - Search [Rack's issue tracker](https://github.com/VCVRack/Rack/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc) to check if someone else has posted a similar bug report.
 	- If the bug is already reported, vote for it by adding a "thumb-up" reaction on the first post.
-	- If not, [open a bug report issue](https://github.com/VCVRack/Rack/issues/new?template=bug_report.md) and fill out the issue template.
+	- If not, [open a bug report issue](https://github.com/VCVRack/Rack/issues/new?template=bug_report.md) and fill out the issue template ([found here](https://raw.githubusercontent.com/VCVRack/Rack/v1/.github/ISSUE_TEMPLATE/bug_report.md) if it doesn't appear when creating your issue).
 
-If you provide enough information for a developer to reproduce and identify the bug, a fix is then implemented, publicly tested with development builds, and released in a future Rack version.
+A developer then attempts to reproduce and identify your bug.
+If successful, a fix is implemented, publicly tested with development builds, and released in a future Rack version.
 
 ## Feature requests for Rack
 
@@ -18,9 +19,10 @@ If you want to propose a feature or change for Rack, follow these steps.
 - Log in or register for a free [GitHub account](https://github.com/).
 - Search [Rack's issue tracker](https://github.com/VCVRack/Rack/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc) to check if someone else has posted a similar feature request.
 	- If the feature is already requested, vote for it by adding a "thumb-up" reaction on the first post.
-	- If not, [open an feature request issue](https://github.com/VCVRack/Rack/issues/new?template=feature_request.md) and fill out the issue template.
+	- If not, [open an feature request issue](https://github.com/VCVRack/Rack/issues/new?template=feature_request.md) and fill out the issue template ([found here](https://raw.githubusercontent.com/VCVRack/Rack/v1/.github/ISSUE_TEMPLATE/feature_request.md) if it doesn't appear when creating your issue).
 
-If your proposal is approved (or modified until approved), the feature is then implemented, publicly tested with development builds, and released in a future Rack version.
+Your proposal is then discussed and possibly modified.
+If approved, the feature is implemented, publicly tested with development builds, and released in a future Rack version.
 
 ## Bug reports and feature requests for Rack plugins
 

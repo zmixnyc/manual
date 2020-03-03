@@ -16,7 +16,6 @@
 - [Reddit](https://www.reddit.com/r/vcvrack/)
 - [IRC](http://webchat.freenode.net?channels=%23VCVRack)
 - [Patchstorage](https://patchstorage.com/platform/vcv-rack/)
-- [Switched On Rack unofficial blog](http://www.switchedonrack.com/)
 - [MuffWiggler thread](https://www.muffwiggler.com/forum/viewtopic.php?t=186899)
 - [KVR Audio thread](https://www.kvraudio.com/forum/viewtopic.php?f=23&t=489230)
 - [Hispasonic thread (Spanish)](https://www.hispasonic.com/foros/foro-vcv-rack/516252)

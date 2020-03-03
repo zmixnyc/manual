@@ -17,7 +17,7 @@ brew install git wget cmake autoconf automake libtool jq python
 
 If you have an anti-virus program running, disable it or it may interfere with the build process.
 
-Install [MSYS2](http://www.msys2.org/) and launch the MinGW 64-bit shell from the Start menu, *not the default MSYS shell*.
+Install the x86_64 version of [MSYS2](http://www.msys2.org/) and launch the MinGW 64-bit shell from the Start menu, *not the default MSYS shell*.
 Update the package manager itself:
 ```bash
 pacman -Syu

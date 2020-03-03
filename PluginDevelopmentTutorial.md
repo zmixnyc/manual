@@ -14,9 +14,9 @@ This contains the Rack API headers and build system for compiling your plugin.
 ## Creating the template plugin
 
 The `helper.py` script included in the Rack SDK is an easy way to create a plugin template.
-You can run it with no arguments to display documentation.
+You can run it with no arguments to show documentation.
 
-Decide on a [slug](Metadata.html#slug) for your plugin.
+Decide on a [slug](Manifest.html#slug) for your plugin.
 We will use `MyPlugin` for this tutorial.
 Run
 ```bash
@@ -40,7 +40,7 @@ Manifest written to MyPlugin/plugin.json
 Created template plugin in MyPlugin/
 Initialized empty Git repository in /home/VCV/MyPlugin/.git/
 ```
-You can change this metadata later by editing `plugin.json`. (See [Metadata](Metadata.html)).
+You can change this manifest later by editing `plugin.json`. (See [Manifest](Manifest.html)).
 
 To test your build system, you may run `RACK_DIR=<Rack SDK folder> make` in the plugin directory.
 If it succeeds, an "empty" plugin will be built containing no modules.
@@ -138,5 +138,5 @@ Eventually you may want to release your hard work.
 See [Plugin Licensing](PluginLicensing.html) for information about following Rack's license, particularly if developing a commercial plugin.
 It is recommended to add a `LICENSE.txt` file to your plugin's root folder that specifies your preferred license (whether open-source or proprietary).
 
-Review your `plugin.json` [metadata](Metadata.html) file for correctness, spelling, and capitalization.
+Review your `plugin.json` [manifest](Manifest.html) file for correctness, spelling, and capitalization.
 Finally, submit your plugin to the [VCV Library](https://github.com/VCVRack/library#adding-your-plugin-to-the-vcv-library-for-open-source-plugins) to allow users to easily download your plugin from their VCV account.

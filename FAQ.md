@@ -29,7 +29,7 @@ It is not planned. There are many issues with such a project.
 ## Is VCV Rack available as a VST/AU/AAX plugin for DAWs?
 
 VCV Rack can be fully considered a DAW itself rather than a "synthesizer plugin", so Rack is a standalone application.
-However, due to overwhelming user demand, a new product called *VCV Rack for DAWs* will be available as a 64-bit VST2 plugin for around $99 shortly after Rack v2 is released around Jan-Feb 2020.
+However, due to overwhelming user demand, a new product called *VCV Rack for DAWs* will be available as a 64-bit VST2 plugin for around $99 shortly after Rack v2 is released.
 VST3/AU/AAX/LV2 versions might be released afterwards, but this is not yet confirmed.
 All Rack v2 plugins will be compatible with the plugin version of Rack.
 The standalone version of Rack v2 will continue to be free/open-source.
@@ -40,6 +40,7 @@ The standalone version of Rack v2 will continue to be free/open-source.
 It relied on [inter-process communication (IPC)](https://en.wikipedia.org/wiki/Inter-process_communication) between Rack (server) and the DAW plugin (client), similar to [ReWire](https://en.wikipedia.org/wiki/ReWire_(software_protocol)).
 Because real-time IPC of audio cannot be achieved on non-[real-time operating systems](https://en.wikipedia.org/wiki/Real-time_operating_system), it was never intended as more than a fun experiment, and the project was concluded a month after development started.
 One could say the experiment "failed", but its purpose was primarily to see how much it would fail.
+The conclusion was that it was not reliable enough for the majority of users.
 VCV Bridge was deprecated in July 2018 and is now unsupported.
 The Bridge VST2/AU plugin was removed in Rack 1.0 (although it can be found in [earlier Rack packages](https://vcvrack.com/downloads/)), and the Bridge audio/MIDI driver will be removed in Rack 2.0.
 
