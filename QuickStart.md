@@ -29,4 +29,4 @@ Finally, adjust Mixer's first channel or main volume by clicking and dragging th
 At this point, you are ready to learn the rest of the Fundamental modules to build your own unique patches.
 I personally recommend that you attempt to push the Fundamental modules to their limits before moving on to other official or third-party plugins.
 They are more capable than they might appear, and learning how to use them effectively will give you more power and understanding when installing more modules later.
-When you are ready, install more plugins with the [Plugin Manager](https://vcvrack.com/plugins.html).
+When you are ready, install more plugins using the [VCV Library](https://library.vcvrack.com/).

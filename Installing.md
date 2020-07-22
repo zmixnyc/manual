@@ -3,8 +3,9 @@
 ## System Requirements
 
 VCV Rack is free software, so you may simply download and run the software to see if it works.
-However, if you are experiencing performance issues, make sure you have at least the following hardware.
-- Operating system: MacOS 10.7+, Windows 7+, or Linux (Ubuntu 16.04+, etc)
+However, if Rack does not run or you are experiencing performance issues, make sure you have at least the following hardware.
+(Also see [How do I improve performance of VCV Rack?](FAQ.html#how-do-i-improve-performance-of-vcv-rack))
+- Operating system: MacOS 10.7+, Windows 7+, or Linux (such as Ubuntu 16.04+)
 - CPU: Intel/AMD 64-bit processor from \~2011 or later
 - Graphics: Dedicated graphics card from \~2013 or later with the latest driver software update:
 	- [Nvidia drivers](https://www.nvidia.com/Download/index.aspx)
@@ -31,23 +32,27 @@ Unzip the zip file.
 
 ## Installing plugins
 
-On [VCVRack.com](https://vcvrack.com/) or the [VCV Plugin Manager](https://vcvrack.com/plugins.html), add each plugin you wish to install.
-If not logged in to your VCV account, you will be prompted to log in or register.
-Once the desired plugins are added to your account, open Rack and log in using the toolbar at the top of the window.
-After logging in, click "Update plugins" and the new plugins will be synchronized to your computer.
+Plugins extend VCV Rack's functionality by adding one or more modules to use in your patch.
+Plugins are typically installed via the [VCV Library](https://library.vcvrack.com/).
+See the *VCV Library Instructions* section at the bottom of the VCV Library page.
 
-If your computer is offline, you may download plugins using another computer and transfer the `Rack/plugins` folder to the offline computer.
-Downloading plugins directly from the Plugin Manager website is not supported at this time.
+If your computer is offline, you may download plugins using another computer and transfer `<Rack user folder>/plugins-v*` (See [Where is the “Rack user folder”?](FAQ.html#where-is-the-rack-user-folder)) to the offline computer.
+Downloading plugins directly from the VCV Library is not supported at this time.
 
-## Installing plugins not available on the Plugin Manager
+## Installing plugins not available on the VCV Library
 
 *Install third-party plugins at your own risk. Like VST plugins, installing plugins from unknown sources may compromise your computer and personal information.*
 
-Download the plugin ZIP package from the vendor's website to `<Rack user folder>/plugins-v1` (See [Where is the "Rack user folder"?](FAQ.html#where-is-the-rack-user-folder)). Rack will extract and load the plugin upon launch.
+Plugins for Rack are distributed as ZIP files with the format `<plugin slug>-<version>-<arch>.zip`, e.g. `MyPlugin-1.0.0-mac.zip`.
+Download the plugin ZIP package from the vendor's website to `<Rack user folder>/plugins-v*` (See [Where is the "Rack user folder"?](FAQ.html#where-is-the-rack-user-folder)).
+Do not extract the ZIP package yourself.
+Rack will extract and load the plugin upon launch.
 
-Note: Do not download the plugin via GitHub's green "Clone or download" button. These are source code ZIP packages and do not contain the compiled plugin binary. If the vendor distributes their plugin with GitHub, look in the "Releases" section for the compiled ZIP packages.
+Note: Plugins must be built (compiled) before Rack can load them.
+GitHub hosts plugin source code, not plugin binaries, so GitHub's green "Clone or download" button will *not* give you a plugin binary.
+However, some plugin maintainer make plugin builds available in the "Releases" section of their GitHub repository.
 
-Note: The "major" version number (e.g the `1` in `v1.2.3`) must match the major version number of Rack. See [ABI/API Version](Version.html).
+Note: The "major" version number (e.g. the `1` in `v1.2.3`) must match the major version number of Rack. See [ABI/API Version](Version.html).
 
 
 ## Running Rack
@@ -69,7 +74,10 @@ Or with the command-line, `cd` into the `Rack` folder and run `./Rack`.
 
 To launch Rack from the command line, `cd` into Rack's folder, and run `./Rack`, optionally with the following options.
 - `<patch filename>`: Loads a patch file.
-- `-s <dir>`: Sets Rack's system folder.
-- `-u <dir>`: Sets Rack's user folder.
+- `-s <Rack system folder>`: Sets Rack's system folder, containing read-only program resources. Defaults to
+	- MacOS: `<app bundle path>/Contents/Resources`
+	- Windows: install location, such as `C:\Program Files\VCV\Rack`
+	- Linux: current working directory
+- `-u <Rack user folder>`: Sets Rack's user folder, containing user settings, plugins, and patches. See [Where is the “Rack user folder”?](FAQ#where-is-the-rack-user-folder) for the default location.
 - `-d`: Enables development mode.
-This sets the system and user folders to the current working directory, uses the terminal (stderr) for logging, and disables the Plugin Manager to prevent overwriting plugins.
+This sets the system and user folders to the current working directory, uses the terminal (stderr) for logging, and disables Rack's Library menu to prevent overwriting plugins.

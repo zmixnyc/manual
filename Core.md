@@ -1,4 +1,4 @@
-# Core
+# Core Modules
 
 The *Core* plugin (built into Rack itself) includes utilities and interfaces for interfacing between the virtual and hardware world.
 

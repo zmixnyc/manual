@@ -42,6 +42,10 @@ Double-click to reset to 50%.
 ### Cable tension
 Sets the relative length of patch cables.
 Double-click to reset to 0.5.
+### Frame rate
+Sets Rack's screen refresh frequency.
+Rack re-draws its screen every [monitor v-sync](https://en.wikipedia.org/wiki/Refresh_rate), or once every $N$ v-syncs determined by this setting.
+Decreasing the frame rate results in almost exactly proportionally decreased GPU resources consumed by Rack, at the cost of more choppy motion.
 ### Fullscreen
 Expands Rack to fill the screen with no window borders.
 
@@ -51,13 +55,14 @@ Expands Rack to fill the screen with no window borders.
 Enables/disables the measurement of time for each module to generate each sample (see [Sample rate](#sample-rate)).
 This displays a meter on each module with the number of microseconds (μs) and the percentage of time spent in the module's assigned thread (see [Threads](#threads)).
 
-The CPU meter consumes engine time itself, so it is recommended to disable it when it is not needed for best performance.
+The CPU meter consumes engine CPU time itself, so it is recommended to disable it when it is not needed for best performance.
 
 ### Sample rate
 Sets Rack's engine sample rate.
 
 Rack's engine works by repeatedly stepping the state of each module by `1 / sampleRate` seconds, producing 1 new sample for each output.
 A higher sample rate decreases the timestep, resulting in more accurate analog circuit modeling and digital algorithms, while a lower sample rate decreases engine CPU usage.
+Engine CPU usage is almost exactly proportional to its sample rate.
 
 ### Threads
 Sets the number of cores to be used in Rack's multithreaded engine.

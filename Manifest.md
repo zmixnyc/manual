@@ -43,7 +43,7 @@ If you publish the source code in a git repository, it is recommended to add a g
 The license of your plugin.
 Use `"proprietary"` for commercial and freeware plugins.
 
-If your plugin uses a common open-source license, use the identifier string from the [SPDX License List](https://spdx.org/licenses/), such as `GPL-3.0-only`, `GPL-3.0-or-later`, `MIT`, `BSD-3-Clause`, `CC0-1.0`, etc.
+If your plugin uses a common open-source license, use the identifier string from the [SPDX License List](https://spdx.org/licenses/), such as `GPL-3.0-or-later`, `GPL-3.0-only`, `MIT`, `BSD-3-Clause`, `CC0-1.0`, etc.
 
 ## `.brand`
 *String. Optional.*
@@ -95,6 +95,11 @@ For GitHub URLs, use the main project page, not the `.git` URL.
 
 Link to donation page for users who wish to donate.
 E.g. [PayPal.Me](https://www.paypal.me/), [Cash App](https://cash.app/) links.
+
+## `.changelogUrl`
+*String. Optional.*
+
+Link to the changelog of the plugin.
 
 ## `.modules[].slug`
 *String. Required.*
@@ -310,3 +315,11 @@ If omitted, the plugin's manual is used.
 
 If this module has the [Hardware clone](Manifest#hardware-clone) tag, this is the URL to the [ModularGrid](https://www.modulargrid.net/) page for that module.
 Example: `"https://www.modulargrid.net/e/mutable-instruments-clouds"`
+
+## `.modules[].deprecated`
+*Boolean. Optional.*
+
+Specifies that the module should no longer be used and only remains for patch compatibility.
+If a successor module exists, add its name to the [description](Manifest#modules-description), e.g. "Replaced by MyModule 2".
+
+In a future version of Rack, deprecated modules will not be displayed in the Module Browser by default but can still be used by opening old patches.

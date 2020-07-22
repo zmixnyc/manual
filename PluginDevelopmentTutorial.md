@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Familiarity with C++, although creating Rack plugins is a great way to learn programming and C++.
+- Familiarity with C++, although creating Rack plugins is a great way to learn programming and C++. Rack plugins are written in [C++11](https://en.cppreference.com/w/cpp/11).
 - Familiarity with navigating the command line (`cd`, `ls`, etc).
 - Familiarity with modular synthesizers. [Digital signal processing (DSP)](DSP.html) knowledge is only required if creating sound generators and processors.
 - Download and install [VCV Rack](https://vcvrack.com/Rack.html).
@@ -10,6 +10,13 @@
 You do not need to build Rack from source if using the Rack SDK.
 - [Download the latest Rack SDK](https://vcvrack.com/downloads/) and extract.
 This contains the Rack API headers and build system for compiling your plugin.
+
+In your terminal, run
+```bash
+export RACK_DIR=<Rack SDK folder>
+```
+to specify the absolute path of the extracted Rack SDK.
+You may wish to add this line to your `~/.bashrc` or other shell environment, so you don't have to define it every time you open a terminal.
 
 ## Creating the template plugin
 
@@ -20,7 +27,7 @@ Decide on a [slug](Manifest.html#slug) for your plugin.
 We will use `MyPlugin` for this tutorial.
 Run
 ```bash
-<Rack SDK folder>/helper.py createplugin MyPlugin
+$RACK_DIR/helper.py createplugin MyPlugin
 ```
 to create a folder called `MyPlugin/` in your current directory.
 Example session:
@@ -42,7 +49,7 @@ Initialized empty Git repository in /home/VCV/MyPlugin/.git/
 ```
 You can change this manifest later by editing `plugin.json`. (See [Manifest](Manifest.html)).
 
-To test your build system, you may run `RACK_DIR=<Rack SDK folder> make` in the plugin directory.
+To test your build system, you may run `make` in the plugin directory.
 If it succeeds, an "empty" plugin will be built containing no modules.
 However, this is an good opportunity to check that your build environment is set up correctly.
 
@@ -118,9 +125,14 @@ Then add the following code to the `process()` function, which is called every a
 		lights[BLINK_LIGHT].setBrightness(blinkPhase < 0.5f ? 1.f : 0.f);
 	}
 ```
-Compile the plugin with `RACK_DIR=<Rack SDK folder> make`.
-If this succeeds, you can build a distributable plugin package with `RACK_DIR=<Rack SDK folder> make dist` or automatically install it to your Rack installation with `RACK_DIR=<Rack SDK folder> make install`.
-You should now be able to test your plugin by opening Rack and adding your module from the Module Browser.
+Compile your plugin with `make`.
+If the build succeeds, you can generate a distributable plugin package with `make dist`, which places it in `dist/`.
+
+You can automatically install the plugin package to your [Rack user folder](https://vcvrack.com/manual/FAQ#where-is-the-rack-user-folder) with `make install`.
+You should now be able to test your plugin by opening Rack and choosing your module in the Module Browser.
+
+If you don't see your plugin in Rack's Module Browser, check the `log.txt` file in your Rack user folder.
+This file contains warnings about plugins that fail to load and error messages if your plugin crashes.
 
 ## Beyond the tutorial
 

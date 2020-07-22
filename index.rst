@@ -10,11 +10,11 @@ Edit this manual at https://github.com/VCVRack/manual.
    :maxdepth: 1
    :caption: Rack
 
-   QuickStart.md
-   Installing.md
    FAQ.md
+   Installing.md
    MenuBar.md
    Core.md
+   Polyphony.md
 
 .. toctree::
    :maxdepth: 1
