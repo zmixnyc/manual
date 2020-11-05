@@ -1,8 +1,12 @@
 # Bugs and Features
 
+VCV offers technical support of commercial VCV plugins by emailing contact@vcvrack.com.
+
+For technical support of VCV Rack, open-source VCV plugins, and third-party plugins, refer to the correct category below.
+
 ## Bug reports for Rack
 
-If you encounter a bug in VCV Rack (not a plugin), such as a UI issue, broken functionality, hang, or crash, follow these steps.
+If you encounter a bug in VCV Rack itself (not a plugin), such as a UI issue, broken functionality, hang, or crash, follow these steps.
 
 - Log in or register for a free [GitHub account](https://github.com/).
 - Search [Rack's issue tracker](https://github.com/VCVRack/Rack/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc) to check if someone else has posted a similar bug report.
@@ -31,5 +35,6 @@ If approved, the feature is implemented, publicly tested with development builds
 If a bug or feature request involves a particular plugin for Rack rather than Rack itself, follow these steps.
 
 - Search for the plugin on the [VCV Library](https://library.vcvrack.com/).
-- If the plugin's source code is hosted on GitHub, open an issue.
+- If the plugin's source code or website is hosted on GitHub or GitLab, open an issue in the Issues tab. Accounts on these websites are free.
 - If not, use the provided contact information by clicking on the email icon or author's website.
+- For bug reports, include the plugin's version, your operating system and version, and steps to reproduce the bug.

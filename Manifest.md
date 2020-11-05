@@ -316,6 +316,9 @@ If omitted, the plugin's manual is used.
 If this module has the [Hardware clone](Manifest#hardware-clone) tag, this is the URL to the [ModularGrid](https://www.modulargrid.net/) page for that module.
 Example: `"https://www.modulargrid.net/e/mutable-instruments-clouds"`
 
+In a partnership with ModularGrid, modules released to the [VCV Library](https://library.vcvrack.com/) will be linked to and from their ModularGrid page.
+For example, [Mutable Instruments Clouds on ModularGrid](https://www.modulargrid.net/e/mutable-instruments-clouds) has an "Available for VCV Rack" link to [Audible Instruments Texture Synthesizer on the VCV Library](https://library.vcvrack.com/AudibleInstruments/Clouds).
+
 ## `.modules[].deprecated`
 *Boolean. Optional.*
 
