@@ -21,6 +21,7 @@ Design recommendations from VCV:
 	- Use an inverted background for output ports (see Fundamental VCO-1 panel above).
 	- Labels should succinctly state the purpose of knobs, switches, and ports.
 - Roughly follow the graphical density and text sizes of Fundamental modules.
+	- Text should be readable at 100% on a non-high-DPI monitor.
 
 
 Do not use other people's intellectual property (IP) without their permission.

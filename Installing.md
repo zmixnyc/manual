@@ -1,5 +1,6 @@
 # Installing & Running
 
+<a id="sysreq"></a>
 ## System Requirements
 
 VCV Rack is free software, so you may simply download and run the software to see if it works.
@@ -14,6 +15,7 @@ However, if Rack does not run or you are experiencing performance issues, make s
 - RAM: 1GB
 - Disk space: 1GB
 
+<a id="installing"></a>
 ## Installing Rack
 
 Download Rack on the [VCV Rack website](https://vcvrack.com/).
@@ -55,6 +57,7 @@ However, some plugin maintainer make plugin builds available in the "Releases" s
 Note: The "major" version number (e.g. the `1` in `v1.2.3`) must match the major version number of Rack. See [ABI/API Version](Version.html).
 
 
+<a id="running"></a>
 ## Running Rack
 
 ### Running on Mac

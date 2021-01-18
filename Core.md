@@ -43,6 +43,7 @@ Note: Using multiple Audio modules is experimental and may crash Rack or render 
 Most DAWs avoid this feature entirely by restricting audio to a single input and a single output device for stability reasons, but if using multiple audio devices in Rack works with your configuration, more power to you!
 
 
+<a id="MIDI"></a>
 ## MIDI Interfaces
 
 Each MIDI interface module (described below) supports the following drivers.

@@ -304,6 +304,15 @@ Serves only extremely basic functions, like inverting, max, min, multiplying by 
 A one-line summary of the module's purpose.
 Displayed in the Module Browser tooltip.
 
+## `.modules[].keywords`
+*String. Optional.*
+
+String of words, aliases, and abbreviations describing the module to improve searchability in the VCV Library and Rack's module browser.
+It is *not* necessary to copy tags from `modules[].tags`.
+Not displayed to the user.
+
+Example: `"24dB 12dB V2164 LM13700 OTA multi-mode analog"`
+
 ## `modules[].manualUrl`
 *String. Optional.*
 

@@ -10,14 +10,14 @@ Your PR will be accepted if it is a net positive benefit to readers.
 
 ## Building
 
-Install [Sphinx](http://www.sphinx-doc.org/en/stable/) 1.8.1. Newer versions do not generate formulas and image tags properly.
+Install [Sphinx](http://www.sphinx-doc.org/en/stable/).
 
-	pip install sphinx==1.8.1
+	pip install sphinx
 	pip install sphinx_rtd_theme
 
-Install [recommonmark](https://github.com/rtfd/recommonmark) 0.4.0.
+Install [recommonmark](https://github.com/rtfd/recommonmark).
 
-	pip install recommonmark==0.4.0
+	pip install recommonmark
 
 Build with
 

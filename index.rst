@@ -12,9 +12,11 @@ Edit this manual at https://github.com/VCVRack/manual.
 
    FAQ.md
    Installing.md
+   GettingStarted.md
    MenuBar.md
    Core.md
    Polyphony.md
+   KeyCommands.md
 
 .. toctree::
    :maxdepth: 1
@@ -42,3 +44,9 @@ Edit this manual at https://github.com/VCVRack/manual.
    Issues.md
    Communities.md
    About.md
+
+
+..
+   This somehow triggers Mathjax to be loaded on all Markdown pages.
+.. math::
+

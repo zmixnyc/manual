@@ -6,7 +6,7 @@ BUILDDIR      = _build
 
 all: html
 
-run: html
+serve: html
 	http-server _build/html
 
 upload: html

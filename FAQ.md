@@ -1,5 +1,13 @@
 # FAQ
 
+<a id="acronym"></a>
+## What does "VCV" stand for?
+
+There is no official meaning of the name "VCV", but users have suggested "Virtual Control Voltage" or "Voltage Controlled Virtualization".
+These are good guesses, but "VCV" was chosen simply because it is easy to remember and type.
+
+
+<a id="userfolder"></a>
 ## Where is the "Rack user folder"?
 
 The Rack user folder stores data readable/writable by Rack.
@@ -11,21 +19,18 @@ You can open it by choosing `Help > Open user folder` in the Rack [menu bar](Men
 
 When running Rack in development mode, it is your current working directory instead.
 
-## Will Rack be ported to iOS or Android?
 
-It is not planned. There are many issues with such a project.
+<a id="plugin"></a>
+## I know what modules are, but what is a VCV Rack plugin?
 
-- Technical:
-	- Tablet and phone users don't normally use mice, so a touch driver would need to be written. If GLFW is still used, [touch support](https://github.com/glfw/glfw/issues/42) would need to be added to the library.
-	- There is no user-managed filesystem on iOS, and forcing users to mess with the filesystem is bad UX on Android, so plugin folders and patch files would need to be managed entirely by Rack itself.
-	- RtAudio and RtMidi don't have iOS Core Audio/MIDI or Android HAL/OpenSL ES backends, so they would need to be added and tested.
-	- Apple does not allow apps distributed through the store to download and execute code, so either all plugins would need to be included in the distributable, or it could only be distributed on jailbroken iOS devices, which is an absurd user requirement.
+A plugin is a single unit of software loaded by VCV Rack that can contain multiple modules.
+Plugins are loaded from `<Rack user folder>/plugins-v*`.
 
-- Business:
-	- Such a port would be expensive to develop, so it would need to be sold commercially. Some plugins (proprietary, GPL, etc) would need special licensing agreements in order to be included in the package. Some plugins would increase the cost of the product if included in the package. Others would simply be omitted from the third-party plugin collection.
-	- The friction for a developer to build and test their plugins on iOS/Android is significantly higher than the three desktop OS's, which may decrease their willingness to develop Rack plugins.
-	- When serving an app on the App Store or Google Play, Apple and Google are not obligated to continue serving an app and may remove it at will or change policies on a whim that can disrupt VCV's business model. This would place a large risk upon VCV.
+When Rack v2 is released, you will be able to add individual modules to your personal module library, rather than entire plugins, so the concept of a "plugin" will soon be hidden from end users and exposed only to developers.
+VCV also plans to offer individual commercial modules for sale, as well as discounted bundles of multiple modules.
 
+
+<a id="daws"></a>
 ## Is VCV Rack available as a VST/AU/AAX plugin for DAWs?
 
 VCV Rack can be fully considered a DAW itself rather than a "synthesizer plugin", so Rack is a standalone application.
@@ -36,22 +41,8 @@ The standalone version of Rack v2 will continue to be free/open-source.
 
 Follow the [Rack development blog](https://community.vcvrack.com/t/rack-development-blog/5864) for the most up-to-date Rack development news.
 
-## What was VCV Bridge?
 
-[VCV Bridge](https://github.com/VCVRack/Bridge) was an experimental project for transferring audio/MIDI between VCV Rack and another DAW via a VST2/AU plugin.
-It relied on [inter-process communication (IPC)](https://en.wikipedia.org/wiki/Inter-process_communication) between Rack (server) and the DAW plugin (client), similar to [ReWire](https://en.wikipedia.org/wiki/ReWire_(software_protocol)).
-Because real-time IPC of audio cannot be achieved on non-[real-time operating systems](https://en.wikipedia.org/wiki/Real-time_operating_system), it was never intended as more than a fun experiment, and the project was concluded a month after development started.
-One could say the experiment "failed", but its purpose was primarily to see how much it would fail.
-The conclusion was that it was not reliable enough for the majority of users.
-VCV Bridge was deprecated in July 2018 and is now unsupported.
-The Bridge VST2/AU plugin was removed in Rack 1.0 (although it can be found in [earlier Rack packages](https://vcvrack.com/downloads/)), and the Bridge audio/MIDI driver will be removed in Rack 2.0.
-
-## Does VCV Rack work with touch screens?
-
-Rack's window library GLFW does not support [touch input](https://github.com/glfw/glfw/issues/42) yet, so Rack relies on the operating system to control the mouse cursor using the touch screen.
-This means that multi-touch gestures do not work.
-However, you can disable "View > Lock cursor while dragging" in the menu bar to prevent Rack from grabbing the mouse cursor when interacting with knobs.
-
+<a id="performance"></a>
 ## How do I improve performance of VCV Rack?
 
 VCV Rack simulates a modular synthesizer where each module itself can be a challenge to simulate on a modern computer, whether it's a virtual analog model with hundreds of analog components to simulate, or a digital module designed to be run on an ARM microprocessor similar to your smart phone's.
@@ -114,3 +105,46 @@ Note that some tips have trade-offs or might not provide any benefit for your si
 	- Although Rack's [System Requirements](Installing.html#system-requirements) suggest that computers as old as 2013 can run Rack, it is recommended to use a computer from 2016 or later that is designed for gaming.
 	There are many gaming laptop and desktop computers on the market for as low as $300, the price of an average hardware Eurorack module.
 	Unfortunately, Apple's MacBook Air and older MacBook Pro models are not designed for gaming (despite their high price!) and are therefore not recommended for VCV Rack.
+
+
+<a id="touch"></a>
+## Does VCV Rack work with touch screens?
+
+Rack's window library GLFW does not support [touch input](https://github.com/glfw/glfw/issues/42) yet, so Rack relies on the operating system to control the mouse cursor using the touch screen.
+This means that multi-touch gestures do not work.
+However, you can disable "View > Lock cursor while dragging" in the menu bar to prevent Rack from grabbing the mouse cursor when interacting with knobs.
+
+
+<a id="res"></a>
+## Rack fails to launch on Mac with the error "Rack’s resource directory "n_…/res" does not exist"
+
+Follow the instructions in [this comment](https://github.com/VCVRack/Rack/issues/1623#issuecomment-551374084).
+
+
+<a id="bridge"></a>
+## What was VCV Bridge?
+
+[VCV Bridge](https://github.com/VCVRack/Bridge) was an experimental project for transferring audio/MIDI between VCV Rack and another DAW via a VST2/AU plugin.
+It relied on [inter-process communication (IPC)](https://en.wikipedia.org/wiki/Inter-process_communication) between Rack (server) and the DAW plugin (client), similar to [ReWire](https://en.wikipedia.org/wiki/ReWire_(software_protocol)).
+Because real-time IPC of audio cannot be achieved on non-[real-time operating systems](https://en.wikipedia.org/wiki/Real-time_operating_system), it was never intended as more than a fun experiment, and the project was concluded a month after development started.
+One could say the experiment "failed", but its purpose was primarily to see how much it would fail.
+The conclusion was that it was not reliable enough for the majority of users.
+VCV Bridge was deprecated in July 2018 and is now unsupported.
+The Bridge VST2/AU plugin was removed in Rack 1.0 (although it can be found in [earlier Rack packages](https://vcvrack.com/downloads/)), and the Bridge audio/MIDI driver will be removed in Rack 2.0.
+
+
+<a id="mobile"></a>
+## Will Rack be ported to iOS or Android?
+
+It is not planned. There are many issues with such a project.
+
+- Technical:
+	- Tablet and phone users don't normally use mice, so a touch driver would need to be written. If GLFW is still used, [touch support](https://github.com/glfw/glfw/issues/42) would need to be added to the library.
+	- There is no user-managed filesystem on iOS, and forcing users to mess with the filesystem is bad UX on Android, so plugin folders and patch files would need to be managed entirely by Rack itself.
+	- RtAudio and RtMidi don't have iOS Core Audio/MIDI or Android HAL/OpenSL ES backends, so they would need to be added and tested.
+	- Apple does not allow apps distributed through the store to download and execute code, so either all plugins would need to be included in the distributable, or it could only be distributed on jailbroken iOS devices, which is an absurd user requirement.
+
+- Business:
+	- Such a port would be expensive to develop, so it would need to be sold commercially. Some plugins (proprietary, GPL, etc) would need special licensing agreements in order to be included in the package. Some plugins would increase the cost of the product if included in the package. Others would simply be omitted from the third-party plugin collection.
+	- The friction for a developer to build and test their plugins on iOS/Android is significantly higher than the three desktop OS's, which may decrease their willingness to develop Rack plugins.
+	- When serving an app on the App Store or Google Play, Apple and Google are not obligated to continue serving an app and may remove it at will or change policies on a whim that can disrupt VCV's business model. This would place a large risk upon VCV.

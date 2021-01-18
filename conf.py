@@ -7,6 +7,7 @@ source_encoding = 'utf-8'
 
 extensions = [
     'sphinx.ext.mathjax',
+    'recommonmark',
 ]
 
 from recommonmark.parser import CommonMarkParser
@@ -94,7 +95,7 @@ epub_exclude_files = ['search.html']
 
 
 def setup(app):
-    app.add_stylesheet("overrides.css")
+    app.add_css_file("overrides.css")
     app.add_config_value('recommonmark_config', {
         'enable_auto_toc_tree': True,
         'auto_toc_tree_section': "Table of Contents",
