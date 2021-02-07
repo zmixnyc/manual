@@ -10,10 +10,9 @@ Your PR will be accepted if it is a net positive benefit to readers.
 
 ## Building
 
-Install [Sphinx](http://www.sphinx-doc.org/en/stable/).
+Install [Sphinx](http://www.sphinx-doc.org/en/stable/) and the [readthedocs theme](https://github.com/readthedocs/sphinx_rtd_theme).
 
-	pip install sphinx
-	pip install sphinx_rtd_theme
+	pip install sphinx sphinx_rtd_theme
 
 Install [recommonmark](https://github.com/rtfd/recommonmark).
 

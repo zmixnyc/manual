@@ -5,6 +5,7 @@
 
 There is no official meaning of the name "VCV", but users have suggested "Virtual Control Voltage" or "Voltage Controlled Virtualization".
 These are good guesses, but "VCV" was chosen simply because it is easy to remember and type.
+"VCV Rack" is the full name of our flagship software product.
 
 
 <a id="userfolder"></a>
@@ -21,9 +22,9 @@ When running Rack in development mode, it is your current working directory inst
 
 
 <a id="plugin"></a>
-## I know what modules are, but what is a VCV Rack plugin?
+## What is a VCV Rack plugin?
 
-A plugin is a single unit of software loaded by VCV Rack that can contain multiple modules.
+A plugin is a single software unit typically developed by one company or individual that can contain multiple VCV Rack modules.
 Plugins are loaded from `<Rack user folder>/plugins-v*`.
 
 When Rack v2 is released, you will be able to add individual modules to your personal module library, rather than entire plugins, so the concept of a "plugin" will soon be hidden from end users and exposed only to developers.

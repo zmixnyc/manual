@@ -41,9 +41,12 @@ If you publish the source code in a git repository, it is recommended to add a g
 *String. Required.*
 
 The license of your plugin.
-Use `"proprietary"` for commercial and freeware plugins.
 
-If your plugin uses a common open-source license, use the identifier string from the [SPDX License List](https://spdx.org/licenses/), such as `GPL-3.0-or-later`, `GPL-3.0-only`, `MIT`, `BSD-3-Clause`, `CC0-1.0`, etc.
+For open-source plugins, use the license identifier string from the [SPDX License List](https://spdx.org/licenses/), such as `GPL-3.0-or-later`, `GPL-3.0-only`, `MIT`, `BSD-3-Clause`, `CC0-1.0`, etc.
+
+For freeware plugins, use `proprietary` (TODO: use `https://vcvrack.com/freeware-eula` when available) or your own freeware license URL.
+
+For commercial plugins, use `https://vcvrack.com/eula` if sold on the VCV Library or your own commercial license URL.
 
 ## `.brand`
 *String. Optional.*
