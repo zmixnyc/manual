@@ -18,7 +18,7 @@ You may alternatively use **dBV** for measurements relative to 1V amplitude.
 
 In Eurorack, power supplies supply **-12 to 12V**.
 No voltage should be generated beyond this range, since it would be mostly impossible to obtain in Eurorack.
-Additionally, protection diodes on the ±12V rails usually drop the range to about ±11.7V.
+Additionally, protection diodes on the ±12V rails will drop the range by 0.7V to about ±11.3V.
 
 However, if you do not want to model analog output saturation for simplicity or performance reasons, that is perfectly fine.
 It is much better to allow voltages outside this range rather than use hard clipping with `clamp(out, -1.f, 1.f)` because in the best case they will be attenuated by a module downstream, and in the worst case, they will be hard clipped by the Audio module from Core.
